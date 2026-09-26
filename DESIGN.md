@@ -207,8 +207,9 @@ about 0.6s. All of it lives in §20 of `site.css`.
 
 - Primary acquisition actions request a demo; sign-in links open the application. Documentation
   and the admin portal are linked from the footer, with docs also in the mobile menu.
-- Pricing uses an enquiry page until commercial terms are approved. No placeholder tiers,
-  trial commitments or implementation-time promises should appear in marketing copy.
+- Pricing shows the three decided tiers — Demo (free), Paid (per active user per month, every
+  module, plus VAT; the figure is live from the app) and Enterprise (talk to us) — in the existing
+  `.price-grid`, with Paid as the featured card. No trial durations or implementation-time promises.
 - The home hero introduces industrial and field operations. Tool-count bars are removed;
   the module ticker is a static wrapping list. Product representations carry sample-data labels.
 - The email composer validates and previews a draft, then offers explicit email and copy actions.

@@ -1002,6 +1002,7 @@
       "/modules/maintenance h4",
       "/modules/manufacturing h4",
       "/modules/procurement h4",
+      "/pricing a",
       "/pricing h4",
       "/privacy h4",
       "/security h4",
@@ -1457,8 +1458,7 @@
     "en": "Explore the modules",
     "where": [
       "/ a",
-      "/about a",
-      "/pricing a"
+      "/about a"
     ]
   },
   {
@@ -2978,7 +2978,7 @@
     ]
   },
   {
-    "en": "Per-member plans, a comparison table and the questions people ask before they commit to a year.",
+    "en": "Try the demo for free, one price per active user with every module included, or talk to us about enterprise terms.",
     "where": [
       "/ p"
     ]
@@ -8216,7 +8216,8 @@
   {
     "en": "Paid",
     "where": [
-      "/modules/finance div"
+      "/modules/finance div",
+      "/pricing p"
     ]
   },
   {
@@ -14110,105 +14111,161 @@
     ]
   },
   {
-    "en": "Discuss Caspian ERP pricing for your organization. Share your team size, workflows and rollout needs, and request a product demo.",
+    "en": "Caspian ERP pricing: try the demo for free, pay one price per active user with every module included, or talk to us about enterprise terms.",
     "where": [
       "/pricing @content"
     ]
   },
   {
-    "en": "Start with your operation.",
+    "en": "One price per user.",
     "where": [
       "/pricing h1"
     ]
   },
   {
-    "en": "Let’s discuss pricing.",
+    "en": "Every module included.",
     "where": [
       "/pricing span"
     ]
   },
   {
-    "en": "Tell us about your team, the workflows you want to connect and the support you need to get started. We’ll discuss the scope with you before you make a commitment.",
+    "en": "Try the demo company for free, pay per active user when you are ready, or talk to us about terms for a large organization.",
     "where": [
       "/pricing p"
     ]
   },
   {
-    "en": "Discuss pricing",
+    "en": "Try the demo",
     "where": [
-      "/pricing a"
+      "/pricing a",
+      "/pricing strong"
     ]
   },
   {
-    "en": "Pricing is available on request. Published plans and rates are not yet available.",
+    "en": "Talk to us",
     "where": [
-      "/pricing p"
+      "/pricing a",
+      "/pricing b"
     ]
   },
   {
-    "en": "A useful conversation starts with three things",
-    "where": [
-      "/pricing h2"
-    ]
-  },
-  {
-    "en": "No need to prepare a full specification. A short description of your operation is enough to start.",
+    "en": "Demo",
     "where": [
       "/pricing p"
     ]
   },
   {
-    "en": "01 &middot; Your team",
+    "en": "Explore a sample company before you decide.",
+    "where": [
+      "/pricing p"
+    ]
+  },
+  {
+    "en": "Free",
+    "where": [
+      "/pricing b"
+    ]
+  },
+  {
+    "en": "Every module, with sample records to explore",
+    "where": [
+      "/pricing li"
+    ]
+  },
+  {
+    "en": "Add your own test records as you look around",
+    "where": [
+      "/pricing li"
+    ]
+  },
+  {
+    "en": "No sign-up: choose",
+    "where": [
+      "/pricing li"
+    ]
+  },
+  {
+    "en": "on the sign-in page",
+    "where": [
+      "/pricing li"
+    ]
+  },
+  {
+    "en": "Shared with other visitors, so never enter real or personal data",
+    "where": [
+      "/pricing li"
+    ]
+  },
+  {
+    "en": "Your own workspace, for your whole team.",
+    "where": [
+      "/pricing p"
+    ]
+  },
+  {
+    "en": "per active user / month + VAT",
     "where": [
       "/pricing span"
     ]
   },
   {
-    "en": "Who will use Caspian?",
-    "where": [
-      "/pricing h3"
-    ]
-  },
-  {
-    "en": "Tell us your approximate team size, departments and sites, and who needs access to the system.",
-    "where": [
-      "/pricing p"
-    ]
-  },
-  {
-    "en": "02 &middot; Your workflows",
+    "en": "Priced per active user, per month, plus VAT",
     "where": [
       "/pricing span"
     ]
   },
   {
-    "en": "What needs to connect?",
+    "en": "Every module included, no add-ons",
     "where": [
-      "/pricing h3"
+      "/pricing li"
     ]
   },
   {
-    "en": "Start with the work that causes the most friction: safety, purchasing, inventory, maintenance or another department.",
+    "en": "Pay only for people who can sign in",
+    "where": [
+      "/pricing li"
+    ]
+  },
+  {
+    "en": "Records for people without a sign-in cost nothing",
+    "where": [
+      "/pricing li"
+    ]
+  },
+  {
+    "en": "VAT added at your country’s rate",
+    "where": [
+      "/pricing li"
+    ]
+  },
+  {
+    "en": "Enterprise",
     "where": [
       "/pricing p"
     ]
   },
   {
-    "en": "03 &middot; Your rollout",
-    "where": [
-      "/pricing span"
-    ]
-  },
-  {
-    "en": "What will it take to start?",
-    "where": [
-      "/pricing h3"
-    ]
-  },
-  {
-    "en": "Bring your questions about existing data, approvals, training and support. These help us define a realistic scope.",
+    "en": "For large organizations and multi-site operations.",
     "where": [
       "/pricing p"
+    ]
+  },
+  {
+    "en": "Terms agreed with your organization",
+    "where": [
+      "/pricing li"
+    ]
+  },
+  {
+    "en": "Onboarding planned around your rollout",
+    "where": [
+      "/pricing li"
+    ]
+  },
+  {
+    "en": "Approvals and settings configured to how you work",
+    "where": [
+      "/pricing li"
     ]
   },
   {
@@ -14218,57 +14275,75 @@
     ]
   },
   {
-    "en": "Understand the product and the proposed scope before making a purchasing decision.",
+    "en": "Short answers to what people ask before they start.",
     "where": [
       "/pricing p"
     ]
   },
   {
-    "en": "Where can I find the price list?",
+    "en": "Who counts as a user?",
     "where": [
       "/pricing summary"
     ]
   },
   {
-    "en": "We are still developing our pricing model. Contact us to discuss your requirements; there are no published standard rates or plan commitments at this stage.",
+    "en": "Anyone who can sign in to your workspace. People you keep records for without giving them a sign-in, such as contractors on your personnel register, do not count, and someone you suspend or offboard stops counting.",
     "where": [
       "/pricing div"
     ]
   },
   {
-    "en": "Can we see the product first?",
+    "en": "Is every module included?",
     "where": [
       "/pricing summary"
     ]
   },
   {
-    "en": "Yes.",
+    "en": "Yes. The price per user covers every module, and there are no add-ons to buy.",
     "where": [
       "/pricing div"
     ]
   },
   {
-    "en": "and tell us which workflows matter to you. You can also",
-    "where": [
-      "/pricing div"
-    ]
-  },
-  {
-    "en": "read the documentation",
+    "en": "See the modules",
     "where": [
       "/pricing a"
     ]
   },
   {
-    "en": "Is pricing per user or per module?",
+    "en": "Is VAT included?",
     "where": [
       "/pricing summary"
     ]
   },
   {
-    "en": "The billing model is not finalized. Share the number of people who need access and the modules you are interested in so we can discuss the right scope.",
+    "en": "No. VAT is added at the rate that applies in your country.",
     "where": [
       "/pricing div"
+    ]
+  },
+  {
+    "en": "Can we try it first?",
+    "where": [
+      "/pricing summary"
+    ]
+  },
+  {
+    "en": "Yes. Choose",
+    "where": [
+      "/pricing div"
+    ]
+  },
+  {
+    "en": "on the sign-in page to open a sample company with no sign-up. It is shared with other visitors, so never enter real or personal data. For a walkthrough,",
+    "where": [
+      "/pricing div"
+    ]
+  },
+  {
+    "en": "request a demo",
+    "where": [
+      "/pricing a"
     ]
   },
   {
@@ -14278,19 +14353,19 @@
     ]
   },
   {
-    "en": "Tell us what systems and spreadsheets you use today. Migration, configuration, training and support requirements need to be discussed alongside the software.",
+    "en": "Tell us what systems and spreadsheets you use today. Migration, configuration, training and support are discussed with you before you start.",
     "where": [
       "/pricing div"
     ]
   },
   {
-    "en": "Is there a free trial?",
+    "en": "When is Enterprise the right choice?",
     "where": [
       "/pricing summary"
     ]
   },
   {
-    "en": "Contact us about evaluation access. Availability, scope, duration and any commercial terms will be confirmed directly before you start.",
+    "en": "When you need terms agreed with your organization, for example for a large number of users or several sites.",
     "where": [
       "/pricing div"
     ]

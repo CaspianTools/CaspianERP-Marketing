@@ -4,6 +4,25 @@ All notable changes to the Caspian ERP marketing site are documented in this fil
 
 ## [Unreleased]
 
+### Changed
+- **`/pricing` shows the three decided tiers, with the live price** (owner, 2026-09-26). The page
+  had invited enquiries while no price was decided. Now: **Demo** — free, the open demo company in
+  the app; **Paid** — one price per active user per month, every module included, VAT added on top;
+  **Enterprise** — talk to us. A new FAQ answers who counts as a user, whether every module is
+  included, VAT, trying first, migration and when Enterprise fits; the home page's pricing card and
+  the page's meta description say the same.
+  - **The figure is never written into a page.** The owner sets it in the admin panel (Plans →
+    Paid); the app publishes it at `https://app.caspianerp.com/api/public/site`, and the new
+    `assets/js/pricing.js` fills it in, formatted for the page's language. A price change therefore
+    reaches all seven languages within minutes, with no edit here.
+  - Without JavaScript, or with the app unreachable, the card reads "Priced per active user, per
+    month, plus VAT" — true whatever the figure is. The request carries no cookie or identifier.
+  - `connect-src` in the CSP now allows `https://app.caspianerp.com`, for that one request.
+  - Thirty translations for the removed enquiry copy are gone from the dictionaries; the sitemap's
+    `lastmod` is 2026-09-26.
+  - The "Develop the pricing model" entry left `future.md`; how clients pay is still open, as
+    CaspianERP-App#694.
+
 ### Added
 - **A cookie consent banner, and Google Analytics behind it** (CaspianOS-App `TODO.md` → **T27**,
   the owner chose the banner over Consent Mode). GA4 shipped on 2026-09-10 with the plain tag: it

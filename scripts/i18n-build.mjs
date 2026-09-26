@@ -30,7 +30,7 @@ const PRIORITY = {
   '/': '1.0', '/modules': '0.9', '/pricing': '0.9', '/contact': '0.7',
   '/about': '0.6', '/privacy': '0.3', '/terms': '0.3',
 };
-const LASTMOD = '2026-09-08';
+const LASTMOD = '2026-09-26';
 
 const dictionaries = new Map();
 export function loadDictionary(lang) {

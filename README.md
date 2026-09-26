@@ -39,10 +39,13 @@ Use email and the contact/demo journey. Existing Bursa references must not be pr
 an office or a verified registered address; confirm entity details separately before updating
 legal identity information.
 
-**Pricing:** Pricing has not been decided. The owner needs help developing the model, not
-just entering numbers. Existing prices, plan limits, and module allocations are placeholders,
-not approved commercial terms. Do not invent replacement prices, discounts, trial durations,
-or billing commitments. The public pricing page now uses pricing-on-request messaging. Next comes a pricing discovery exercise before rates or trial terms are published.
+**Pricing:** Decided on 2026-09-26 — three tiers: **Demo** (free, the open demo company in the
+app), **Paid** (one price per active user per month, every module included, VAT added) and
+**Enterprise** (talk to us). The Paid figure is not in any page: the owner sets it in the admin
+panel (Plans → Paid), the app publishes it at `https://app.caspianerp.com/api/public/site`, and
+`public/assets/js/pricing.js` fills it in on `/pricing`. Without JavaScript, or with the app
+unreachable, the card reads "Priced per active user, per month, plus VAT". That fetch is why
+`connect-src` in `firebase.json` allows the app's origin.
 
 ## Layout
 
@@ -67,7 +70,7 @@ or billing commitments. The public pricing page now uses pricing-on-request mess
 │   │   └── administration.html   The configuration story; included with every plan
 │   ├── industries.html     Industry positioning
 │   ├── security.html       Security & access control
-│   ├── pricing.html        Pricing enquiry and FAQ
+│   ├── pricing.html        The three tiers (live price) and FAQ
 │   ├── about.html          Company
 │   ├── contact.html        Contact + book a demo (#demo)
 │   ├── privacy.html        Privacy policy
@@ -198,7 +201,7 @@ custom domain), not from this repo.
 
 `public/privacy.html` and `public/terms.html` now name **CaspianTools, Bursa, Türkiye** and Turkish
 governing law, but they still lack a full registered address and a company registration number, and
-they have not been reviewed by counsel. The pricing page now uses an enquiry flow until the commercial model is established. Both are tracked in [future.md](future.md).
+they have not been reviewed by counsel. This is tracked in [future.md](future.md).
 
 Behavioral checks for navigation and the email composer: `node --test scripts/check-interactions.mjs`.
 
