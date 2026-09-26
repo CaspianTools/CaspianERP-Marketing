@@ -35,9 +35,13 @@ This file is the central index, while each supporting document keeps its purpose
 - CaspianTools has no physical office yet. Publish no real or invented telephone numbers,
   telephone links, office address, map or invitation to visit. Use email and online demos.
   Existing Bursa legal references are not proof of an office or verified registered address.
-- Pricing is undecided. Help the owner develop a pricing model; do not expect them to supply
-  arbitrary numbers. No invented prices, plan allocations, discounts or trial commitments.
-  Provisional offers have been removed from the source; the pricing page invites enquiries.
+- Pricing was decided on 2026-09-26: three tiers. **Demo** is free (the open demo company in the
+  app, reached by "Try the demo" on its sign-in page). **Paid** is one price per active user per
+  month, every module included, VAT added on top. **Enterprise** is "talk to us". Never write the
+  Paid figure into a page: the owner sets it in the admin panel (Plans → Paid) and
+  `assets/js/pricing.js` reads it from the app's public `GET /api/public/site`, so the site follows
+  a price change without an edit. The static fallback names the model, not a number. Still no
+  invented discounts, plan allocations or trial durations.
 - The contact form validates and previews email drafts, with mail-app and webmail-copy actions.
   It does not send or store leads. A backend remains outstanding.
 - Product views use labeled sample data; authentic screenshots and evidence remain outstanding.
@@ -85,7 +89,7 @@ one registrar and one Stripe account should not be asked to remember three lists
 here.
 
 **What belongs there.** Only what the owner can do and an assistant cannot: a console or DNS step,
-a credential an assistant must never hold, a decision the code cannot make — pricing being the
+a credential an assistant must never hold, a decision the code cannot make — how clients pay being the
 standing example in this repository — or a check that only works against the live site. If an
 assistant can do it, it does it, and it is not written down. Outstanding work that is merely
 unstarted stays in `future.md`; it moves to the app's `TODO.md` only once it blocks something

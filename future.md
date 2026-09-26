@@ -55,31 +55,6 @@ rebrand was made, and inventing them would be worse than naming the entity and s
 
 **Estimated effort:** 0.5 day plus legal review turnaround
 
-### Develop the pricing model (placeholder offers removed)
-**What:** `public/pricing.html` formerly published Starter $12 / Growth $29 per member per month and a
-module split between the tiers. These numbers and the tier contents are a plausible starting point,
-not a commercial decision.
-
-**Why it matters:** Published prices set expectations and are quoted back at you in negotiations.
-
-**Why deferred:** No pricing decision had been made when the site was built. On 2026-09-06,
-the owner confirmed that they need help developing pricing and cannot supply prices yet.
-The current prices, tier contents and limits must not be treated as approved terms.
-
-**How to approach:**
-1. Develop the offer with the owner: identify the initial buyer and use case, active users
-   versus personnel records, expected hosting/support costs, onboarding effort, and whether
-   charging per organization, active user, or package best fits the value delivered. Research
-   comparable offers and validate willingness to pay before proposing actual prices.
-2. Until that work is complete, replace provisional public prices and unconfirmed commercial
-   promises with consistent pricing-on-request messaging and a contact/demo action. This replacement is implemented in the marketing source as of 2026-09-06; deployment is separate.
-3. Once approved, update the three `.price-card` blocks, the `.compare-table` rows, and the "Who counts as a
-   member?" FAQ answer — the three must agree.
-4. Check metadata, home page FAQ, module pages, footer and `/modules` copy for anything that
-   contradicts the offer. Confirm trial scope and duration separately; do not guess them.
-
-**Estimated effort:** 0.5 day once the pricing is decided
-
 ### Server-side contact form (email composer improved)
 **What:** The contact form now validates and previews an email draft, with explicit mail-app and copy-to-webmail actions plus a no-JS direct email fallback. It does not post or store leads,
 because Firebase Hosting serves static files only.
