@@ -47,10 +47,16 @@ panel (Plans → Paid), the app publishes it at `https://app.caspianerp.com/api/
 unreachable, the card reads "Priced per active user, per month, plus VAT". That fetch is why
 `connect-src` in `firebase.json` allows the app's origin.
 
+**Short links:** `caspianerp.com/{code}` is the public face of the app's link shortener. A path that
+is a digit followed by 6 to 15 letters or digits is redirected (302) to
+`https://app.caspianerp.com/s/{code}`, and the app sends the visitor to the original link. The regex
+lives in `firebase.json` and must match `SHORT_CODE_RE` in the app's `shortLinks.ts`. Hosting
+applies redirects before it serves files, so never give a page a path of that shape.
+
 ## Layout
 
 ```
-├── firebase.json           Hosting config: clean URLs, caching, security headers
+├── firebase.json           Hosting config: clean URLs, caching, security headers, short-link redirect
 ├── .firebaserc             Pins deploys to the `caspianos` Firebase project
 ├── public/                 Everything served
 │   ├── index.html          Home
