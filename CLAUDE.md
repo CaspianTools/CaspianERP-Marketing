@@ -247,3 +247,13 @@ npx firebase-tools emulators:start --only hosting
 - **Escape bare ampersands** in copy (`&amp;`) — several module names contain one.
 - **Keep `DESIGN.md` in sync** with `public/assets/css/site.css`. Do not start a competing design
   doc, and do not import patterns from the application's design system.
+
+## Announcements
+
+For any user-visible change (a new feature, a fix users would notice, a release, or a notice), add `announcements/YYYY-MM-DD-<slug>.md` in the **same PR as the change** — copy [announcements/_TEMPLATE.md](announcements/_TEMPLATE.md). When it merges, [.github/workflows/announce-caller.yml](.github/workflows/announce-caller.yml) posts it as a GitHub Discussion in **this repo's** `Announcements` category, which is what this product's page on caspiantools.com shows.
+
+- Never try to create the Discussion yourself; the workflow is the only poster. It skips duplicates, so a manual re-run is safe.
+- Frontmatter: `title` (user-facing headline), `type` (`feature | fix | release | notice`), `social` (`false` = site only, no social media), `draft` (`true` = commit without posting).
+- Body: two to five plain sentences for users, not developers — what changed, why it matters, where to find it.
+- Skip for internal-only, refactor, typo or formatting changes.
+- Never edit or rename a file that has already been posted (a renamed file posts again).
