@@ -3,6 +3,13 @@
     "public": "public",
     "cleanUrls": true,
     "trailingSlash": false,
+    "redirects": [
+      {
+        "regex": "^/(?P<code>[0-9][0-9A-Za-z]{6,15})$",
+        "destination": "https://app.caspianerp.com/s/:code",
+        "type": 302
+      }
+    ],
     "ignore": ["**/.*", "**/node_modules/**"],
     "headers": [
       {

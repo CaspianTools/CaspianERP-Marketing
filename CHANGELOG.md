@@ -4,6 +4,19 @@ All notable changes to the Caspian ERP marketing site are documented in this fil
 
 ## [Unreleased]
 
+### Added
+- **Short links: `caspianerp.com/{code}`** (owner, 2026-09-28: links pasted in the app are shortened
+  "like in LinkedIn … with our own link"). `firebase.json` gains one regex redirect: a path that is
+  a digit followed by 6 to 15 letters or digits goes to `https://app.caspianerp.com/s/{code}`. The
+  app looks the code up and sends the visitor to the original link. Codes are issued and stored by
+  the app (`shortLinks.ts` and `shortLinks/{code}` in CaspianOS-App).
+  - **Why the leading digit.** Firebase Hosting applies redirects *before* it serves files, so the
+    pattern must never match a page of this site. Every page here is a word (`/pricing`, `/az`),
+    and `/404` is too short to match. Do not add a page whose path is a digit followed by seven or
+    more letters and digits.
+  - `302`, not `301`, so a code disabled in the admin panel stops working at once rather than
+    living on in browser caches.
+
 ### Changed
 - **`/pricing` shows the three decided tiers, with the live price** (owner, 2026-09-26). The page
   had invited enquiries while no price was decided. Now: **Demo** — free, the open demo company in
