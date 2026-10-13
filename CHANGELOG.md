@@ -4,6 +4,14 @@ All notable changes to the Caspian ERP marketing site are documented in this fil
 
 ## [Unreleased]
 
+### Changed
+- **`/privacy` lists what the demo page collects** (CaspianERP-App#773). The app's **Try the demo**
+  now asks for industry, company size and contact details before the demo opens, stores them as a
+  lead, emails a personal demo link and keeps it in the browser for 30 days. A **Demo details**
+  line under *When you use the application* says so. Last updated is now 13 October 2026, and the
+  sitemap `LASTMOD` too, so crawlers come back for it. Translated into all six languages and
+  regenerated.
+
 ### Added
 - **Short links: `caspianerp.com/{code}`** (owner, 2026-09-28: links pasted in the app are shortened
   "like in LinkedIn … with our own link"). `firebase.json` gains one regex redirect: a path that is
