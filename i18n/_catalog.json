@@ -14384,10 +14384,9 @@
     ]
   },
   {
-    "en": "Last updated: 4 September 2026",
+    "en": "Last updated: 13 October 2026",
     "where": [
-      "/privacy p",
-      "/terms p"
+      "/privacy p"
     ]
   },
   {
@@ -14531,6 +14530,18 @@
   },
   {
     "en": "security and audit records, including membership, role and permission changes.",
+    "where": [
+      "/privacy li"
+    ]
+  },
+  {
+    "en": "Demo details:",
+    "where": [
+      "/privacy strong"
+    ]
+  },
+  {
+    "en": "if you use Try the demo, the name, work email, company, industry and company size you enter, any job title, phone and country you add, and how often you come back to the demo. We use them to follow up on your interest and to email you a personal link back into the demo, which your browser also keeps in its own storage for 30 days.",
     "where": [
       "/privacy li"
     ]
@@ -15189,6 +15200,12 @@
     "en": "The terms governing use of the Caspian ERP website and application.",
     "where": [
       "/terms @content"
+    ]
+  },
+  {
+    "en": "Last updated: 4 September 2026",
+    "where": [
+      "/terms p"
     ]
   },
   {
