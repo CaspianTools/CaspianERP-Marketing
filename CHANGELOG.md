@@ -5,6 +5,9 @@ All notable changes to the Caspian ERP marketing site are documented in this fil
 ## [Unreleased]
 
 ### Changed
+- **`@playwright/test` 1.63 → 1.64**, the newest release in its major (2026-10-26 dependency check,
+  alongside the other three repositories). It is the site's only dependency, a development one with
+  no browser suite on top yet, so nothing served changes; `npm audit` was and stays clean.
 - **`/privacy` lists what the demo page collects** (CaspianERP-App#773). The app's **Try the demo**
   now asks for industry, company size and contact details before the demo opens, stores them as a
   lead, emails a personal demo link and keeps it in the browser for 30 days. A **Demo details**
