@@ -5,6 +5,8 @@ All notable changes to the Caspian ERP marketing site are documented in this fil
 ## [Unreleased]
 
 ### Changed
+- **`@playwright/test` 1.65.0 → 1.65.1**, a patch release (listed as a patch behind on 2026-11-17).
+  Development-only; nothing served changes, and `npm audit` stays clean.
 - **`@playwright/test` 1.64 → 1.65**, the newest release in its major (2026-11-13 dependency check).
   Development-only; nothing served changes, and `npm audit` stays clean.
 - **`@playwright/test` 1.63 → 1.64**, the newest release in its major (2026-10-26 dependency check,
