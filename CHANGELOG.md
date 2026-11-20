@@ -5,6 +5,11 @@ All notable changes to the Caspian ERP marketing site are documented in this fil
 ## [Unreleased]
 
 ### Changed
+- **Owner actions are GitHub issues on CaspianERP-App in the standard layout, each linking the
+  session that asked** (owner, 2026-11-20). `CLAUDE.md` no longer sends owner items to the archived
+  `TODO.md`: `[YOU]` / `[YOU · DECIDE]` / `[CLAUDE]` titles with `repo:marketing`, steps first,
+  reasons collapsed, and a `## Sessions` block naming the Claude Code session that made the change
+  and the one waiting for the result.
 - **`@playwright/test` 1.65.0 → 1.65.1**, a patch release (listed as a patch behind on 2026-11-17).
   Development-only; nothing served changes, and `npm audit` stays clean.
 - **`@playwright/test` 1.64 → 1.65**, the newest release in its major (2026-11-13 dependency check).

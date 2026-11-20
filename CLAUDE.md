@@ -20,8 +20,8 @@ This file is the central index, while each supporting document keeps its purpose
 - DESIGN: the single source of truth for visual rules; read before visual edits and keep in sync.
 - future: outstanding work, dependencies and unresolved decisions.
 - CHANGELOG: the history of implemented changes.
-- CaspianOS-App's TODO.md: anything only the owner can do. Not a file in this repository — see
-  "Owner items live in CaspianOS-App's TODO.md" below.
+- GitHub issues on CaspianERP-App: anything only the owner can do. Not a file and not this
+  repository's tracker — see "Owner actions live in GitHub issues on CaspianERP-App" below.
 
 ## Owner decisions and current state
 
@@ -75,32 +75,124 @@ This file is the central index, while each supporting document keeps its purpose
 - Track remaining work in future.md. Verify Git, PR and deployment state before claiming a
   change is committed, merged or live; a local edit or changelog entry is not deployment proof.
 
-## Owner items live in CaspianOS-App's TODO.md
+## Owner actions live in GitHub issues on CaspianERP-App, linked to the session that asked
 
-Saying it in the session is not handing it over. Sessions end and chat scrolls, so an item raised
-only in a reply is lost, then rediscovered weeks later by a session that has no idea it was already
-raised. Anything this repository leaves for the owner goes into **`TODO.md` in CaspianOS-App**
-(`https://github.com/CaspianTools/CaspianOS-App`), which is the owner's single queue for all three
-repositories — the application, the platform cockpit (CaspianOS-Admin) and this site. Report it in
-the session as well; the report is the notification, that file is the record.
+**Rule (owner, 20 Nov 2026).** Anything the owner has to do, decide or check
+is a GitHub issue **on [CaspianTools/CaspianERP-App](https://github.com/CaspianTools/CaspianERP-App/issues)**,
+opened in the same turn it comes up — never only in the chat. The chat
+disappears when the session ends; the issue does not. Link the issue in the
+reply. Search the open issues first and add to an existing one rather than
+opening a duplicate.
 
-There is deliberately **no `TODO.md` in this repository**. One person with one Google Cloud console,
-one registrar and one Stripe account should not be asked to remember three lists. Do not start one
-here.
+**One queue, on CaspianERP-App** (the owner's single queue for the
+application, the platform cockpit, this site and the docs). Issues
+are not opened in this repository, and there is no `TODO.md` here or there
+any more (CaspianERP-App's `TODO.md` is an archive since 2026-09-22). Opening
+an issue there needs no checkout of it: the GitHub tools reach it directly,
+so the seam between repositories is never a reason for an item to go
+unrecorded.
 
-**What belongs there.** Only what the owner can do and an assistant cannot: a console or DNS step,
-a credential an assistant must never hold, a decision the code cannot make — how clients pay being the
-standing example in this repository — or a check that only works against the live site. If an
-assistant can do it, it does it, and it is not written down. Outstanding work that is merely
-unstarted stays in `future.md`; it moves to the app's `TODO.md` only once it blocks something
-already shipped, or once an assistant is waiting on the answer to continue.
+**What belongs there.** Only what the owner can do and an assistant cannot:
+a console or DNS step, a credential an assistant must never hold, a decision
+the code cannot make, or a check that only works against the live site. If
+an assistant can do it, it does it, and it is not written down. Outstanding
+work that is merely unstarted stays in `future.md`; it becomes an issue only
+once it blocks something already shipped, or once an assistant is waiting on
+the answer to continue.
 
-**The cross-repository seam.** A session working here usually cannot commit to CaspianOS-App in the
-same commit as the change that raised the item. When that happens, attach that repository
-(`add_repo`) and add the entry as soon as it is in reach — the seam is not a reason for the item to
-go unrecorded. Follow that file's own conventions rather than inventing a shape: stable `T` ids that
-are never renumbered or reused, and each entry carrying *what to do*, *why it matters*, *context*
-and *done when*. Read the file before adding, so an item already there is updated, not duplicated.
+### Mark who it is for, twice
+
+| For | Label | Title starts with |
+| --- | --- | --- |
+| The owner — something to do or check | `repo:marketing` + `owner-action` | `[YOU]` |
+| The owner — a choice to make | `repo:marketing` + `owner-decision` | `[YOU · DECIDE]` |
+| Claude — work scoped for a later session | `repo:marketing` *(provenance only)* | `[CLAUDE]` |
+
+The queue uses `owner-action` / `owner-decision` in place of `for: owner` /
+`decision`, `repo:marketing` for provenance on every issue raised here, and
+`blocker` when something already built cannot be finished without it. When
+an issue changes hands, change both markers.
+
+### The shape of a `[YOU]` issue: steps first, reasons last
+
+```
+## Do this
+
+1. One action, naming the site, repository or console it happens in.
+   A command, or a Claude for Chrome script for anything done in a
+   browser, goes in its own block under the step.
+
+2. Next action.
+
+## Why
+
+Two sentences at most: what is wrong and what doing the steps changes.
+
+**Urgency:** one word, with a half-sentence if it needs one.
+
+## Sessions
+
+**Changed by:** https://claude.ai/code/session_… (pull request CaspianTools/CaspianERP-Marketing#N)
+
+**Asked by:** https://claude.ai/code/session_… (go back here with the result)
+
+<details>
+<summary>Background</summary>
+
+- Everything else: how it was found, what Claude could not do and why,
+  the exact names of projects, services and settings involved.
+
+</details>
+```
+
+- **Steps are the issue**: one imperative action each, a blank line between
+  every block, under about 120 words above `<details>`. Explanation goes
+  inside `<details>`, collapsed. One issue, one thing to do.
+- **The owner is not a developer.** Write in plain words what happens to
+  the business, the site or the customer; literal text only in a command.
+- `[YOU · DECIDE]` uses the same frame with `## Decide` (the options as a
+  numbered list, the recommendation marked) in place of `## Do this`.
+- **Anything in a browser is a Claude for Chrome script** inside the step,
+  never a list of clicks: numbered steps, one action each, the address in
+  every step that navigates, the exact on-screen words to expect, stop at
+  the first step that misbehaves, nothing it must not touch, and a check of
+  the deploy first when the step depends on one. It ends: "Give me step,
+  pass or fail, and the exact wording of anything that failed. If every
+  step passed, comment the results on <issue link> and close it; otherwise
+  comment the failing step and leave it open. End the comment with: Report
+  this back to <Asked by session link>."
+- **A changed script is a new comment**, never an edit: headed
+  `Updated script (<date>) — use this one`, holding the whole script. A
+  "run it again" is a new comment too.
+- **Commands for the owner** run on Windows in PowerShell and Command
+  Prompt alike: full paths, no shell variables, no `&&`, no pipes.
+
+### Link the session that asked
+
+An issue alone does not say which conversation wants the answer, so every
+one carries the session's link, and the owner can go back to that session
+and report what was done.
+
+- **Where the link comes from:** the `Claude-Session:` line of the commit
+  attribution (`https://claude.ai/code/session_…`); if it is missing,
+  `get_session` with no id gives the session id.
+- **Every `[YOU]` and `[YOU · DECIDE]` issue has the `## Sessions` section**:
+  **Changed by** (the session that made the change being checked, with its
+  pull request) and **Asked by** (the session waiting for the result). When
+  they are the same, one line: `**Session:** <link> (made the change and is
+  waiting for the result)`.
+- **Every comment that asks the owner to run a script** starts with
+  `**Asked by:** <link>`; the newest comment's session is the one to go back
+  to. A `[CLAUDE]` issue names the session that opened it the same way.
+- A session that finds a result on an issue acts on it there, even when
+  another session asked: the link is for the owner, not a lock.
+
+### Close what is finished
+
+Close an issue once the evidence is in (the owner's report, a script's
+comment, output they pasted), with a one-line comment saying what proves
+it; `not planned` when nothing was done. Never close on an assumption.
+End every issue and comment with the Claude Code attribution footer.
 
 ## What this repo is
 
